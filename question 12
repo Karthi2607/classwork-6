@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int m, n;
+    
+    printf("Enter the values of m and n: ");
+    scanf("%d %d", &m, &n);
+    
+    printf("Even numbers between %d and %d:\n", m, n);
+    for (int i = m; i <= n; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+    
+    printf("\nOdd numbers between %d and %d:\n", m, n);
+    for (int i = m; i <= n; i++) {
+        if (i % 2 != 0) {
+            printf("%d ", i);
+        }
+    }
+    
+    return 0;
+}
