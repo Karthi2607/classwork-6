@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// function to find the GCD of two numbers
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+// function to find the LCM of two numbers
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // find and print the GCD
+    int gcd_res = gcd(num1, num2);
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd_res);
+
+    // find and print the LCM
+    int lcm_res = lcm(num1, num2);
+    printf("LCM of %d and %d is %d\n", num1, num2, lcm_res);
+
+    return 0;
+}
